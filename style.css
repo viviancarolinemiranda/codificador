@@ -109,9 +109,19 @@ footer {
     flex-grow: 1;
     padding-right: 0%;
   }
+  form {
+    padding: 2%;
+    background-color: white;
+    color: #101010;
+    width: 90%;
+    height: auto;
+    border-radius: 30px;
+    padding: 20px;
+  }
   footer {
-    font-size: 80%;
+    font-size: 70%;
     margin-top: auto;
-    height: 8vh;
+    height: auto;
+    padding: 5px;
   }
 }

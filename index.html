@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Criptografia</title>
+  </head>
+  <body>
+    <main>
+      <form>
+        <fieldset id="tipoDeCodigo">
+          <label>Você deseja codificar ou decodificar uma mesagem?<br /></label>
+          <input
+            type="radio"
+            name="option"
+            value="codificar"
+            class="codOuDecod"
+            checked
+          />
+          Codificar
+          <input
+            type="radio"
+            name="option"
+            value="decodificar"
+            class="codOuDecod"
+          />
+          Decodificar<br /><br />
+        </fieldset>
+
+        <fieldset>
+          <label>Escolha o método a ser utilizado.<br /></label>
+          <select name="metodo" id="escolhaMetodo">
+            <option value="" disabled selected>--</option>
+            <option value="cifraDeCesar">Cifra de César</option>
+            <option value="base64">Base 64</option>
+          </select>
+        </fieldset>
+
+        <fieldset id="selecionePasso">
+          <label for="passo"
+            ><br />Selecione o passo (entre 1 e 25).<br
+          /></label>
+          <input type="number" id="passo" name="numPasso" value="1" max="25" />
+        </fieldset>
+
+        <fieldset>
+          <label for="mensagem"><br />Digite sua mensagem.<br /></label>
+          <textarea
+            id="texto"
+            name="mensagem"
+            rows="3"
+            cols="48"
+            placeholder="Digite sua mensagem aqui"
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <textarea
+            id="resultadoMensagem"
+            name="resultado"
+            rows="3"
+            cols="48"
+            readonly
+          >
+          </textarea>
+        </fieldset>
+
+        <button type="button" id="botao">Codificar</button>
+      </form>
+    </main>
+    <footer>
+      <p>
+        Todos os direitos reservados &copy; 2021 Resilia - Desenvolvido para
+        fins didáticos - Criado por Caroline Miranda.
+      </p>
+    </footer>
+    <script src="./mensagem_oculta2.js"></script>
+  </body>
+</html>

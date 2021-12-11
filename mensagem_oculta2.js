@@ -6,7 +6,6 @@ var resultado = document.getElementById("resultadoMensagem");
 
 metodo.addEventListener("change", function () {
   if (metodo.value == "cifraDeCesar") {
-    console.log("ajdajdlk");
     selecionePasso.style.display = "block";
     passo.style.display = "block";
   } else {
@@ -72,21 +71,17 @@ function cifraDecodificar(msg, passo) {
 botao.addEventListener("click", function (event) {
   event.preventDefault();
   if (metodo.value == "cifraDeCesar" && codOuDecod[0].checked) {
-    console.log("primeiro if");
     var valorMsg = mensagem.value.split("");
     var valorPasso = parseInt(passo.value);
     resultado.value = cifraCodificar(valorMsg, valorPasso);
   } else if (metodo.value == "cifraDeCesar" && codOuDecod[1].checked) {
-    console.log("seg if");
     var valorMsg = mensagem.value.split("");
     var valorPasso = parseInt(passo.value);
     resultado.value = cifraDecodificar(valorMsg, valorPasso);
   } else if (metodo.value == "base64" && codOuDecod[0].checked) {
-    console.log("terc if");
     var valorMsg = mensagem.value;
     resultado.value = btoa(valorMsg);
   } else if (metodo.value == "base64" && codOuDecod[1].checked) {
-    console.log("quar if");
     var valorMsg = mensagem.value;
     resultado.value = atob(valorMsg);
   }
